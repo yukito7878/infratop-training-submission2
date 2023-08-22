@@ -1,0 +1,72 @@
+<div class='flash'>
+    <%= flash[:notice] %>
+</div>
+
+<h1 class='page-title'>Books</h1>
+
+
+<table class='books-box'>
+    <thead class='tables'>
+        <tr>
+            <th class='table-title'>Title</th>
+            <th class="table-body">Body</th>
+            <th></th>
+        </tr>
+        
+    </thead>
+    <tbody> 
+        <% @books.each do |book| %>
+            <tr class='books'>
+                <td class='book-title'><%= book.title %></td>
+                <td class='book-body'><div class='cell-content'><%= book.body %></div></td>
+                <td class='bottons'>
+                    <%= link_to 'Show', book_path(book) %>
+                    <span> | </span>
+                    <%= link_to 'Edit', edit_book_path(book) %>
+                    <span> | </span>
+                    <%= link_to "Destroy", book_path(book), method: :delete, "data-confirm" => "Are you sure you delete this book ?" %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+    
+</table>
+
+
+<h1 class='page-title page-title2'>New Book</h1> 
+<% if @book.errors.any? %>
+    <div class='errors-box'>
+        <div class='warning-message'><%= @book.errors.count %> errors prohibited this book from being saved:</div>
+        <div class='error-messages'>
+            <ul>
+                <% @book.errors.full_messages.each do |message| %>
+                <li></span><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+        
+    </div>
+    
+<% end %>
+
+<%= form_with model: @book, url: '/books', method: :post do |f| %>
+    
+    <div class='newBook'>
+        <% if @book.errors.any? %>
+            <h4 class='error-present'>title</h4>
+            <div class='title-box error-present2'><%= f.text_field :title %></div>
+            <h4 class='error-present'>body</h4>
+            <div class='body-box error-present2'><%= f.text_area :body %></div>
+        <% else %>
+            <h4>title</h4>
+            <div class='title-box'><%= f.text_field :title %></div>
+            <h4>body</h4>
+            <div class='body-box'><%= f.text_area :body %></div>
+        <% end %>
+        
+        <div class='create-botton'><%= f.submit 'Create Book' %></div>
+    </div>
+    
+    
+    
+<% end %>

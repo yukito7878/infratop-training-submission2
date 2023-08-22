@@ -1,0 +1,101 @@
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+
+
+.flash{
+    color: green;
+    line-height: 40px;
+    padding-left: 70px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.page-title{
+    padding: 0 0 0 30px;
+    font-size: 28px;
+}
+
+tr.books{
+    line-height: 25px;
+    font-size: 13px;
+}
+.books-box{
+    margin: 15px 0 ;
+    padding-left: 40px;
+}
+.cell-content{
+    margin: 0 20px;
+}
+.newBook{
+    padding-left: 40px;
+    display: inline-block;
+}
+
+.warning-message{
+    background-color: red;
+    color: white;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+    background-color: #c00
+}
+
+.errors-box{
+    margin: 20px 0 20px 40px;
+    border: 2px solid red;
+    width: 450px;
+}
+
+.error-messages{
+    height: 100px;
+    padding: 30px 0 30px 80px;
+    background-color: #f0f0f0;
+    font-size: 12px;
+}
+
+li::marker{
+    font-size: 12px;
+}
+
+.create-botton{
+    padding: 0;
+    margin: 0;
+}
+
+
+.error-present{
+    margin-top: 10px;
+    padding: 5px;
+    display: inline-block;
+    background-color: red;
+}
+
+.error-present2{
+    text-align: center;
+    border: 2px solid red;
+    background-color: red;
+}
+
+.show-book{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 70px;
+}
+.show-tag{
+    font-weight: bold;
+}
+.show-bottons{
+    padding-top: 15px;
+    padding-left: 40px;
+}
+
+.edit-box{
+    padding: 30px 0 0 30px;
+}
+.editBook{
+    display: inline-block;
+}
+.edit-errors-box{
+    border: 2px solid red;
+    width: 450px;
+}

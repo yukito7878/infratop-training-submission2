@@ -1,0 +1,27 @@
+// Place all the styles related to the homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1.yokoso{
+    padding: 50px 0 12px 50px;
+    font-size: 28px;
+}
+
+.description{
+    font-size: 12px;
+    padding-left: 70px;
+    line-height: 5;
+}
+
+.bookers{
+    font-weight: bold;
+}
+
+div.start-botton{
+    padding-left: 70px;
+}
